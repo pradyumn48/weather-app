@@ -1,70 +1,11 @@
-# Getting Started with Create React App
+**Dashboard.js**: The Dashboard component presents a user-friendly interface with a background image and a form allowing users to input city and country details. Additionally, it includes a "Get Weather" button that, when clicked, triggers the retrieval of weather information based on the provided city and country data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**WeatherDetails.js** : The WeatherDetails component provides a platform to showcase weather details fetched from an external API, utilizing data retrieved through React Router's useLocation hook. This enables users to access comprehensive weather information corresponding to the selected city and country from the dashboard.
 
-## Available Scripts
+**Form.js** : The Form component facilitates user interaction by providing input fields for city and country selection, along with a "Get Weather" button. Upon clicking the button, it triggers the retrieval of weather information using an external API. Additionally, it utilizes React Router's useNavigate hook to navigate to the WeatherDetails component, passing the fetched weather data as state.
 
-In the project directory, you can run:
+**Information.js**: The Information component serves as a visually appealing display for weather details obtained from an external API. It showcases essential weather information including location, temperature, humidity, sunrise and sunset times, weather conditions, and cloud coverage. Additionally, it provides error handling to prompt users to input values for weather retrieval when necessary, enhancing the user experience and comprehension of weather data.
 
-### `npm start`
+**Api.js** : The api.js module facilitates communication with an external weather API by providing a function getWeather for retrieving weather data based on the specified city and country. It utilizes Axios for making HTTP requests and handles error cases gracefully by logging any encountered errors. This module enhances the application's functionality by enabling seamless integration with weather data sources, thereby enriching the user experience with accurate and timely weather information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**App.js** : This File utilizes React Router to manage navigation within the application. It sets up routes for the Dashboard and WeatherDetails components, ensuring smooth transition between the two pages. This allows users to seamlessly interact with the weather application, accessing both the input interface and detailed weather information display.
