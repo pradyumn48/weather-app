@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, styled } from '@mui/material';
 import Information from '../components/Information';
+import { useLocation } from 'react-router-dom';
 
 
 const Component = styled(Box)({
@@ -14,10 +15,12 @@ const Component = styled(Box)({
 const WeatherDetails = () => {
     const [result, setResult] = useState({});
 
+    const location = useLocation();
+
     return (
         <Component>
             <Box style={{ width: '73%', height: '80%' }}>
-                <Information result={result} />
+                <Information result={location.state} />
             </Box>
         </Component>
     )

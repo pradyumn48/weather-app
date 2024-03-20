@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, InputBase, Button, styled } from '@mui/material';
 import { getWeather } from '../services/api';
+import { BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom';
 
 const Container = styled(Box)({
     background: '#445A6F',
@@ -20,6 +21,8 @@ const GetButton = styled(Button)({
 const Form = ({ setResult }) => {
     const [data, setData] = useState({ city: '', country: '' })
 
+    const navigate = useNavigate();
+
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
     }
@@ -27,6 +30,7 @@ const Form = ({ setResult }) => {
     const getWeatherInfo = async () => {
         let response = await getWeather(data.city, data.country);
         setResult(response);
+        navigate("/WeatherDetails", { state: response });
     }
 
     return (
